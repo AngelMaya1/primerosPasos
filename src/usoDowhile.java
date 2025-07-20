@@ -1,11 +1,13 @@
-import javax.swing.JOptionPane;
+import java.util.Scanner;
 
-public class ejercicioPrueba {
+public class usoDowhile {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		
-		int numeroAleatorio=(int)(Math.random()*100)+1;
+		Scanner entrada=new Scanner(System.in);
+		
+		int numeroAleatorio=(int)(Math.random()*100);
 		
 		int intentos=0;
 		
@@ -13,20 +15,24 @@ public class ejercicioPrueba {
 		
 		int numeroDos=0;
 		
-		while(numeroUno!=numeroDos) {
-		
+		do {
 			intentos++;
+		    
+			System.out.println("Introduce un numero del 0 al 99");
 			
-			numeroDos=Integer.parseInt(JOptionPane.showInputDialog("Introduce un numero del 1 al 100"));
+			numeroDos=entrada.nextInt();
 			
 			if(numeroDos<numeroUno)System.out.println("El numero ingresado es menor");
 			
 			else if(numeroDos>numeroUno)System.out.println("El numero ingresado es mayor");
-		}
 		
+		} while(numeroUno!=numeroDos);
+					
 		System.out.println("Bravo adivinastes el numero");
 		
 		System.out.println("Te a tomado " + intentos + " intentos para adivinar el numero");
+		
+		entrada.close();
 	}
 
 }

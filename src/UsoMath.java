@@ -7,8 +7,7 @@ public class UsoMath {
 
 		//int raiz=(int)Math.sqrt(9);
 		//casting es declarar de que tipo sea la variable
-		
-		
+	
 		//int potencia=(int)Math.pow(5,3);
 		//clase pow
 		
